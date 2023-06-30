@@ -1,6 +1,6 @@
 # Node.js on zOS (Wazi Sandbox)
 
-The repository contains a simple application that is used as a baseline to demonstrate how to run a **Node.js** application on a zOS using the [Wazi Sandbox environment](https://www.ibm.com/docs/en/cloud-paks/z-modernization-stack/2023.2?topic=host-option-1-managing-development-test-environments-sandbox), a solution that emulates zOS on OCP x86. 
+The repository contains a simple application that is used as a baseline to demonstrate how to run a **Node.js** application on a zOS using the [Wazi Sandbox environment](https://www.ibm.com/docs/en/cloud-paks/z-modernization-stack/2023.2?topic=host-option-1-managing-development-test-environments-sandbox), a solution that emulates zOS on OCP x86.
 
 The application exposes various endpoints to perform operations to CREATE, READ, UPDATE, and DELETE one or more user entities stored in a **DB2** database hosted by the **Wazi Sandbox**.
 
