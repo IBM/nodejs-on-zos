@@ -217,11 +217,11 @@ To run the application in Wazi Sandbox, you have several ways to download/push t
 
 To do this, you can use `ssh` to connect to the Wazi sandbox and execute the command:
 
-`git -c http.sslVerify=false clone https://github.com/IBM/hands-on-lab-for-zsystem.git`.
+`git -c http.sslVerify=false clone https://github.com/IBM/nodejs-on-zos.git`.
 
 ```sh
-IBMUSER : /u/ibmuser : > git -c http.sslVerify=false clone https://github.com/IBM/hands-on-lab-for-zsystem.git
-Cloning into 'hands-on-lab-for-zsystem'...
+IBMUSER : /u/ibmuser : > git -c http.sslVerify=false clone https://github.com/IBM/nodejs-on-zos.git
+Cloning into 'nodejs-on-zos'...
 remote: Enumerating objects: 16, done.
 remote: Counting objects: 100% (16/16), done.
 remote: Compressing objects: 100% (15/15), done.
@@ -229,10 +229,10 @@ remote: Total 16 (delta 0), reused 16 (delta 0), pack-reused 0
 Receiving objects: 100% (16/16), 6.23 KiB | 1.04 MiB/s, done.
 ```
 
-At this point, a new folder named `hands-on-lab-for-zsystem` has been created in the file system, go to the new folder (`cd hands-on-lab-for-zsystem`) and run the `npm install` command, which will install all the dependencies needed to run the application.
+At this point, a new folder named `nodejs-on-zos` has been created in the file system, go to the new folder (`cd nodejs-on-zos`) and run the `npm install` command, which will install all the dependencies needed to run the application.
 
 ```sh
-IBMUSER : /u/ibmuser/hands-on-lab-for-zsystem : > npm install
+IBMUSER : /u/ibmuser/nodejs-on-zos : > npm install
 added 381 packages, and audited 382 packages in 30s
 
 44 packages are looking for funding
@@ -244,7 +244,7 @@ found 0 vulnerabilities
 Now you have to edit the variables in the **.env** file, update the values of the `WAZI_SANDBOX_USER` and `WAZI_SANDBOX_PASSWORD` variables and edit the others if necessary.
 
 ```sh
-IBMUSER : /u/ibmuser/hands-on-lab-for-zsystem : > vi .env
+IBMUSER : /u/ibmuser/nodejs-on-zos : > vi .env
 WAZI_SANDBOX_DB2_IP=localhost
 WAZI_SANDBOX_DB2_PORT=5040
 WAZI_SANDBOX_USER=
@@ -259,9 +259,9 @@ WAZI_SANDBOX_PASSWORD=
 Finally you can execute `npm test` and after `npm start` to test and run the Node.js application:
 
 ```sh
-IBMUSER : /u/ibmuser/hands-on-lab-for-zsystem : > npm test
+IBMUSER : /u/ibmuser/nodejs-on-zos : > npm test
 
-> hands-on-lab-for-zsystem@1.0.0 test
+> nodejs-on-zos@1.0.0 test
 > jest --runInBand --setupFiles dotenv/config
 
  PASS  __tests__/user_service.test.js
@@ -275,9 +275,9 @@ Ran all test suites.
 ```
 
 ```sh
-IBMUSER : /u/ibmuser/hands-on-lab-for-zsystem : > npm start
+IBMUSER : /u/ibmuser/nodejs-on-zos : > npm start
 
-> hands-on-lab-for-zsystem@1.0.0 start
+> nodejs-on-zos@1.0.0 start
 > node -r dotenv/config src/server.js dotenv_config_path=.env
 
 Server is running and listening at port http://localhost:1339
@@ -291,13 +291,13 @@ At this point the application is listening on port `1339`!
 
 Now that the application is up and running, you can use the **script.sh** file to test the endpoints.
 
-Open a new ssh connection to the Wazi Sandbox and go to the `hands-on-lab-for-zsystem` folder, after which you can run the command:
+Open a new ssh connection to the Wazi Sandbox and go to the `nodejs-on-zos` folder, after which you can run the command:
 
  `sh __scripts__/script.sh` 
 
 ```sh
-IBMUSER : /u/ibmuser : > cd hands-on-lab-for-zsystem
-IBMUSER : /u/ibmuser/hands-on-lab-for-zsystem : > sh __scripts__/script.sh
+IBMUSER : /u/ibmuser : > cd nodejs-on-zos
+IBMUSER : /u/ibmuser/nodejs-on-zos : > sh __scripts__/script.sh
 Choose option:
 1) Get all users
 2) Get user by email
